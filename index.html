@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="images/favicon-32x32.png"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title>Tip calculator app challenge hub</title>
+</head>
+<body>
+
+    <div class="container_left">
+        <h2>Select Tip %</h2>
+        <ul class="select-tip">
+            <li>
+                <input type="radio" id="5%" name="tip" value="5%">
+                <label for="5%">5%</label>
+            </li>
+            <li>
+                <input type="radio" id="10%" name="tip" value="10%">
+                <label for="10%">10%</label>
+            </li>
+            <li>
+                <input type="radio" id="15%" name="tip" value="15%">
+                <label for="15%">15%</label>
+            </li>
+            <li>
+                <input type="radio" id="25%" name="tip" value="25%">
+                <label for="25%">25%</label>
+            </li>
+            <li>
+                <input type="radio" id="50%" name="tip" value="50%">
+                <label for="50%">50%</label>
+            </li>
+            <li>
+                <input type="text" id="custom-amount" name="custom" placeholder="Custom" />
+            </li>
+        </ul>
+    </div>
+
+    <div class="container_tip-and-total">
+        <div class="tip-and-total_row">
+            <div class="detail">
+                <h2>Tip Amount</h2>
+                <p>/ person</p>
+            </div>
+            <p id="tip-amount">$0.00</p>
+        </div>
+
+        <div class="tip-and-total_row">
+            <div class="detail">
+                <h2>Total</h2>
+                <p>/ person</p>
+            </div>
+            <p id="total">$0.00</p>
+        </div>
+
+        <button class="cta">RESET</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

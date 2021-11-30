@@ -1,0 +1,122 @@
+* {
+    font-family: 'Space Mono', monospace;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(185, 41%, 84%);
+}
+
+h2 {
+    font-size: 17px;
+    font-weight: 700;
+    padding-bottom: 16px;
+}
+
+
+
+.container_left {
+    background-color: white;
+    max-width: 413px;
+}
+
+.select-tip {
+    list-style-type: none;
+    display: grid;
+    padding-bottom: 39px;
+    align-items: center;
+    justify-items: stretch;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+    max-width: 379px;
+}
+
+.select-tip input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+
+#custom-amount {
+    font-size: 24px;
+    max-width: 117px;
+    height: 44px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.select-tip label {
+    padding: 6px 37px;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 6px;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    /* border: 1px solid #CCC; */
+    cursor: pointer;
+    /* z-index: 90; */
+  }
+  
+.select-tip input[type="radio"]:checked+label,
+.Checked+label {
+    background: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+
+
+.select-tip label:hover {
+    background: hsl(173, 61%, 77%);
+    color: hsl(183, 100%, 15%);
+}
+
+/******* Right card *******/
+
+.container_tip-and-total {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(183, 100%, 15%);
+    max-width: 333px;
+    border-radius: 14px;
+    padding: 40px 40px;
+}
+
+.tip-and-total_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.container_tip-and-total h2 {
+    color: hsl(189, 41%, 97%);
+    font-size: 17px;
+}
+
+.container_tip-and-total p {
+    color: hsl(184, 14%, 56%);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#tip-amount, #total {
+    color: hsl(172, 67%, 45%);
+    font-size: 48px;
+}
+
+.cta {
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+    font-size: 21px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.cta:hover {
+    background-color: hsl(173, 61%, 77%);
+}

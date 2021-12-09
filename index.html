@@ -12,56 +12,77 @@
     <title>Tip calculator app challenge hub</title>
 </head>
 <body>
-
-    <div class="container_left">
-        <h2>Select Tip %</h2>
-        <ul class="select-tip">
-            <li>
-                <input type="radio" id="5%" name="tip" value="5%">
-                <label for="5%">5%</label>
-            </li>
-            <li>
-                <input type="radio" id="10%" name="tip" value="10%">
-                <label for="10%">10%</label>
-            </li>
-            <li>
-                <input type="radio" id="15%" name="tip" value="15%">
-                <label for="15%">15%</label>
-            </li>
-            <li>
-                <input type="radio" id="25%" name="tip" value="25%">
-                <label for="25%">25%</label>
-            </li>
-            <li>
-                <input type="radio" id="50%" name="tip" value="50%">
-                <label for="50%">50%</label>
-            </li>
-            <li>
-                <input type="text" id="custom-amount" name="custom" placeholder="Custom" />
-            </li>
-        </ul>
-    </div>
-
-    <div class="container_tip-and-total">
-        <div class="tip-and-total_row">
-            <div class="detail">
-                <h2>Tip Amount</h2>
-                <p>/ person</p>
+    <img class="logo" src="images/logo.svg"/>
+    <div class="container">
+        <div class="container_inputs">
+            
+            <div class="container_inputs_row-1">
+                <h2>Bill</h2>
+                <input type="number" placeholder="0" min="0" onchange="saveBill(value)" />
             </div>
-            <p id="tip-amount">$0.00</p>
-        </div>
+            
+            <div class="container_select-tip container_inputs_row-2">
+                <h2>Select Tip %</h2>
+                <div class="select-tip_buttons">
+                    <div class="btn">
+                        <input type="radio" id="five-pcent" name="tip-pcent" value="5" onclick="saveTipValue(value)" />
+                        <label for="five-pcent">5%</label>
+                    </div>
 
-        <div class="tip-and-total_row">
-            <div class="detail">
-                <h2>Total</h2>
-                <p>/ person</p>
+                    <div class="btn">
+                        <input type="radio" id="ten-pcent" name="tip-pcent" value="10" onclick="saveTipValue(value)" />
+                        <label for="ten-pcent">10%</label>
+                    </div>
+
+                    <div class="btn">
+                        <input type="radio" id="fifteen-pcent" name="tip-pcent" value="15" onclick="saveTipValue(value)" />
+                        <label for="fifteen-pcent">15%</label>
+                    </div>
+
+                    <div class="btn">
+                        <input type="radio" id="twentyfive-pcent" name="tip-pcent" value="25" onclick="saveTipValue(value)" />
+                        <label for="twentyfive-pcent">25%</label>
+                    </div>
+
+                    <div class="btn">
+                        <input type="radio" id="fifty-pcent" name="tip-pcent" value="50" onclick="saveTipValue(value)" />
+                        <label for="fifty-pcent">50%</label>
+                    </div>
+
+                    <div>
+                        <input type="number" id="custom-pcent" placeholder="Custom" onchange="saveTipValue(value, placeholder)" onclick="uncheckRadioInputs()" />
+                    </div>
+                </div>
             </div>
-            <p id="total">$0.00</p>
+
+            <div class="container_inputs_row-3">
+                <div>
+                    <h2>Number of People</h2>
+                    <p id="error-message">Cant' be zero</p>
+                </div>
+                <input type="number" id="number-of-people" placeholder="0" min="0" onchange="saveNumberOfPeople(value)" />
+            </div>
         </div>
+        
+        <div class="container_results">
+            <div class="results_row">
+                <div class="detail">
+                    <h2>Tip Amount</h2>
+                    <p>/ person</p>
+                </div>
+                <p id="tip-per-person">$0.00</p>
+            </div>
 
-        <button class="cta">RESET</button>
+            <div class="results_row">
+                <div class="detail">
+                    <h2>Total</h2>
+                    <p>/ person</p>
+                </div>
+                <p id="total-per-person">$0.00</p>
+            </div>
+            <button id="reset-btn" onclick="resetAll()">RESET</button>
+        </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
